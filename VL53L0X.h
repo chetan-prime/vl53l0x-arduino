@@ -4,6 +4,10 @@
 #include <Arduino.h>
 #include <Wire.h>
 
+// The Arduino two-wire interface uses a 7-bit number for the address,
+// and sets the last bit correctly based on reads and writes
+#define ADDRESS_DEFAULT 0b0101001
+
 class VL53L0X
 {
   public:
