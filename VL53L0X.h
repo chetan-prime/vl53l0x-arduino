@@ -97,7 +97,7 @@ class VL53L0X
 
     uint8_t last_status; // status of last I2C transmission
 
-    VL53L0X(TwoWire *i2c = &Wire);
+    VL53L0X(uint8_t address = ADDRESS_DEFAULT, TwoWire *i2c = &Wire);
 
     void setAddress(uint8_t new_addr);
     inline uint8_t getAddress(void) { return address; }

@@ -34,8 +34,8 @@
 
 // Constructors ////////////////////////////////////////////////////////////////
 
-VL53L0X::VL53L0X(TwoWire *i2c)
-  : address(ADDRESS_DEFAULT)
+VL53L0X::VL53L0X(uint8_t address, TwoWire *i2c)
+  : address(address)
   , io_timeout(0) // no timeout
   , did_timeout(false)
   , i2c(i2c)
